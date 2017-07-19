@@ -77,15 +77,14 @@ gulp.task('copy', function() {
 })
 
 // Run everything
-gulp.task('default', ['browserSync', 'less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: './',
-        },
-        open: false
+            baseDir: '',
+        }
     })
 });
 
