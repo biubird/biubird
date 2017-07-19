@@ -36,7 +36,7 @@
     "scrollreveal": "^3.3.2"
   },
   "scripts": {
-    "build": "gulp",
-    "start": "gulp browserSync"
+    "start": "node app",
+    "postinstall": "gulp default"
   }
 }
