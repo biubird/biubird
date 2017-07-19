@@ -36,6 +36,7 @@
     "scrollreveal": "^3.3.2"
   },
   "scripts": {
-    "start": "gulp default"
+    "start": "nodemon gulpfile.js",
+    "postbuild": "gulp"
   }
 }
