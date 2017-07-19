@@ -37,6 +37,6 @@
   },
   "scripts": {
     "start": "node app",
-    "postinstall": "gulp browserSync"
+    "postinstall": "gulp default"
   }
 }
