@@ -36,7 +36,6 @@
     "scrollreveal": "^3.3.2"
   },
   "scripts": {
-    "start": "node app",
-    "postinstall": "gulp default"
+    "start": "gulp default"
   }
 }
