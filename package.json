@@ -36,6 +36,6 @@
     "scrollreveal": "^3.3.2"
   },
   "scripts": {
-    "start": "gulp browserSync"
+    "start": "gulp"
   }
 }
