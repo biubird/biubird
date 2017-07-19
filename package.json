@@ -2,6 +2,10 @@
   "name": "biubird",
   "title": "biubird",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.9.1",
+    "npm": "3.10.8"
+  }
   "author": "HeatherDoucet",
   "license": {
     "type": "ISC"
@@ -36,7 +40,7 @@
     "scrollreveal": "^3.3.2"
   },
   "scripts": {
-    "build": "node gulpfile.js",
+    "start": "node gulpfile.js",
     "postinstall": "gulp default"
   }
 }
