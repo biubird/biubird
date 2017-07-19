@@ -87,15 +87,7 @@ gulp.task('browserSync', function() {
         },
         open: false
     })
-})
-
-// gulp.task('serveprod', function(){
-//   connect.server({
-//     root: biubird,
-//     port: process.env.port,
-//     livereload: false
-//   })
-// })
+});
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
@@ -105,4 +97,14 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
+});
+//Prod task
+gulp.task('heroku:production', function(){
+  browserSync({
+    server: {
+      baseDir: './'
+    },
+    port: process.env.PORT || 3000
+  });
+  console.log('hello heroku');
 });

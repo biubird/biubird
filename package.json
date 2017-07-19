@@ -40,7 +40,6 @@
     "scrollreveal": "^3.3.2"
   },
   "scripts": {
-    "start": "node gulpfile.js",
-    "postinstall": "gulp"
+    "start": "gulp heroku:production"
   }
 }
