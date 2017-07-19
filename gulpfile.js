@@ -89,6 +89,14 @@ gulp.task('browserSync', function() {
     })
 })
 
+gulp.task('serveprod', function(){
+  connect.server({
+    root: biubird,
+    port: process.env.port,
+    livereload: false
+  })
+})
+
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
     gulp.watch('less/*.less', ['less']);
