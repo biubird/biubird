@@ -1,1 +1,1 @@
-web: gulp heroku:production
+web: gulp default

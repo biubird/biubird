@@ -77,13 +77,13 @@ gulp.task('copy', function() {
 })
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['browserSync', 'less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: '',
+            baseDir: './',
         },
         open: false
     })
@@ -97,14 +97,4 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
-});
-//Prod task
-gulp.task('heroku:production', function(){
-  browserSync({
-    server: {
-      baseDir: './'
-    },
-    port: process.env.PORT || 3000
-  });
-  console.log('hello heroku');
 });
